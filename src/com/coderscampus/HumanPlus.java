@@ -17,7 +17,27 @@ public class HumanPlus {
 	String weight;
 	String eyeColor;
 	private String dharma; //cannot be accessed
-	public int age;
+	private int age; // on its own, anyway...
+	
+	public int getAge() {
+		// This is a GETTER
+		return this.age;
+	}
+	
+	public void setAge(int age) { // RECOMMENDED that this be the same name as the instance variable
+		// This is a SETTER
+		System.out.println("Attempting to change age...");
+		if (age < 0 || age > 65000000) {
+			System.out.println("Authorization failed. Time travel is not allowed.\n");
+			return;
+		}
+		System.out.println("Authorization succeeded.\n");
+		this.age = age;
+	}
+	
+	public String getDharma() {
+		return this.dharma;
+	}
 	
 	HumanPlus () {
 		System.out.println("The door to the demon world has been opened without properties.\n"

@@ -18,14 +18,14 @@ public class StaticExample {
 		}
 		
 		HumanPlus aChild = new HumanPlus();
-		aChild.age = 12;
+		aChild.setAge(12);
 		System.out.println(aChild.getStageOfLife());
 		
 		System.out.println("By the way, the minimum age to be an adult is " +
 							(HumanPlus.TEENAGER_AGE_MAX + 1) + ".");
 		
 		HumanPlus anAdult = new HumanPlus();
-		anAdult.age = 20;
+		anAdult.setAge(20);
 		System.out.println(anAdult.getStageOfLife());
 		
 		
