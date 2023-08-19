@@ -4,11 +4,15 @@ package com.coderscampus;
 public class User {
 	
 	// Constructor for exercise
-	User (String username, String password, String firstName, String lastName) {
+	User (String username, String password, String name) {
 		this.username = username;
 		this.password = password;
-		this.firstName = firstName;
-		this.lastName = lastName;
+		this.name = name;
+	}
+	
+	// Black constructor
+	User () {
+		System.out.println("User created.");
 	}
 	
 	// Variables, getters, and setters
@@ -27,17 +31,12 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getFirstName() {
-		return firstName;
+	private String name;
+	public String getName() {
+		return name;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setName(String name) {
+		this.name = name;
 	}
 	public int getFailedLoginAttempts() {
 		return failedLoginAttempts;
@@ -46,7 +45,5 @@ public class User {
 		this.failedLoginAttempts = failedLoginAttempts;
 	}
 	private String password;
-	private String firstName;
-	private String lastName;
 	private int failedLoginAttempts;
 }
